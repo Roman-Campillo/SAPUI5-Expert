@@ -1,12 +1,12 @@
 {
-  "name": "sapui5",
+  "name": "SAPUI5",
   "version": "0.0.1",
   "private": true,
   "description": "Invoice List",
   "keywords": [
     "ui5",
     "openui5",
-    "sapui5"
+    "SAPUI5"
   ],
   "main": "webapp/index.html",
   "dependencies": {},
@@ -15,8 +15,8 @@
     "@sap/ux-ui5-tooling": "1"
   },
   "scripts": {
-    "start": "fiori run --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#logaligroupsapui5-display\"",
-    "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#logaligroupsapui5-display\"",
+    "start": "fiori run --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#logaligroupSAPUI5-display\"",
+    "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#logaligroupSAPUI5-display\"",
     "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
     "deploy": "fiori verify",
     "deploy-config": "fiori add deploy-config",

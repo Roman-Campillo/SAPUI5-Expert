@@ -1,7 +1,8 @@
 sap.ui.define([
     'sap/ui/core/mvc/Controller',
     'sap/m/MessageToast',
-    'sap/ui/model/json/JSONModel'
+    'logaligroup/sapui5/model/models',
+    'sap/ui/model/resource/ResourceModel'
 ],
     /**
      * 
@@ -9,24 +10,23 @@ sap.ui.define([
      * @param {typeof sap.m.MessageToast} MessageToast
      * 
      */
-    function (Controller, MessageToast, JSONModel) {
+    function (Controller, MessageToast, models, ResourceModel) {
         'use strict';
 
         return Controller.extend("logaligroup.sapui5.controller.Main", {
 
-            onInit: function(){
-                let oData = {
-                    recipient: {
-                        name: "World"
-                    }
-                };
+            onInit: function (){
+                this.getView().setModel(models.createRecipient());
 
-                const oModel = new JSONModel(oData);
-                this.getView().setModel(oModel);
+                let i18nModel = new ResourceModel({ bundleName : "logaligroup.sapui5.i18n.i18n"});
+                this.getView().setModel(i18nModel, "i18n")
             },
             onShowhello: function () {
 
-                MessageToast.show("Hello World");
+                var oBundle = this.getView().getModel("i18n").getResourceBundle();
+                var sRecipient = this.getView().getModel().getProperty("/recipient/name");
+                var sMsg = oBundle.getText("helloMsg", [sRecipient]);
+                MessageToast.show(sMsg);
             }
 
 

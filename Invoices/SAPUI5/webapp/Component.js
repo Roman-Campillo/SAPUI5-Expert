@@ -21,11 +21,11 @@ Sap.ui.define([
                 UIComponent.prototype.init.apply(this, arguments);
 
                 //set data model on the view
-                this.setmodel(Models.createRecipient());
+                this.setModel(Models.createRecipient());
 
                 //set i18n model on the view
-                var i18nModel = new ResourceModel({ bundlename: "logaligroup.SAPUI5.i18n.i18n" });
-                this.setmodel(i18nModel, "i18n");
+                var i18nModel = new ResourceModel({ bundleName: "logaligroup.SAPUI5.i18n.i18n" });
+                this.setModel(i18nModel, "i18n");
             }
         });
 

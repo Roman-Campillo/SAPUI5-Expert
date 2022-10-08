@@ -2,17 +2,23 @@
           xmlns="sap.m" 
           xmlns:mvc="sap.ui.core.mvc" 
           displayBlock="true">
-    <App>
-        <pages>
-            <Page title="{i18n>appTitle}">
-                <content>
-                    <Button text="{i18n>showHello}" press="onShowhello" />
-                    <Input value="{/recipient/name}" 
-                        width="50%" 
-                        description="Hello {/recipient/name}" 
-                        valueLiveUpdate="true" />
-                </content> 
-            </Page>
-        </pages>
-    </App>
+    <Shell>
+        <App>
+            <pages>
+                <Page title="{i18n>appTitle}">
+                    <content>
+                        <Panel headerText="{i18n>helloPanel}" class="sapUiResponsiveMargin" width="auto">
+                            <content>
+                                <Button text="{i18n>showHello}" press="onShowhello" class="sapUiSmallMarginEnd"/>
+                                <Input value="{/recipient/name}" 
+                                    width="50%" 
+                                    valueLiveUpdate="true" />
+                                <Text text="Hello {/recipient/name}" class="sapUiSmallMargin"/>
+                            </content>
+                        </Panel>
+                    </content> 
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>

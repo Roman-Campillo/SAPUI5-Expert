@@ -13,7 +13,7 @@
                                 <Input value="{/recipient/name}" 
                                     width="50%" 
                                     valueLiveUpdate="true" />
-                                <Text text="Hello {/recipient/name}" class="sapUiSmallMargin"/>
+                                <Text text="Hello {/recipient/name}" class="sapUiSmallMargin boldElements sapthemeHight-asColor"/>
                             </content>
                         </Panel>
                     </content> 

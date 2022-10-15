@@ -116,10 +116,10 @@
       }
     },
     "rootView": {
-      "viewName": "logaligroup.sapui5.view.App",
+      "viewName": "logaligroup.sapui5.view.Main",
       "type": "XML",
       "async": true,
-      "id": "App"
+      "id": "Main"
     }
   }
 }

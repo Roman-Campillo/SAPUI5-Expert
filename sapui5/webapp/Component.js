@@ -9,16 +9,11 @@ sap.ui.define([
 
         return UIComponent.extend("logaligroup.sapui5.Component", {
 
-            metadata : {
-                "rootView": {
-                    "viewName": "logaligroup.sapui5.view.Main",
-                    "type": "XML",
-                    "async": true,
-                    "id": "Main"
-                  }
+            metadata: {
+                manifest: "json"
             },
 
-        init: function () {
+            init: function () {
                 // call the base component's init function
                 UIComponent.prototype.init.apply(this, arguments);
 
@@ -38,11 +33,11 @@ sap.ui.define([
                 let i18nModel = new ResourceModel({ bundleName: "logaligroup.sapui5.i18n.i18n" });
                 this.setModel(i18nModel, "i18n")
             },
-            exit: function() {
+            exit: function () {
                 this._helloDialog.destroy();
                 delete this._helloDialog;
             },
-            onOpenDialog: function() {
+            onOpenDialog: function () {
                 this._helloDialog.open();
             }
         });

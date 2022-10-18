@@ -17,7 +17,7 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "/sap/opu/odata/",
+        "uri": "Northwind/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
           "annotations": [],
@@ -71,12 +71,16 @@
       },
       "invoices": {
         "type": "sap.ui.model.json.JSONModel",
-        "uri" : "Invoices.json"
+        "uri": "Invoices.json"
       },
-      "": {
+      "northwind": {
         "dataSource": "mainService",
         "preload": true,
-        "settings": {}
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": false
+        }
       }
     },
     "resources": {

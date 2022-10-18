@@ -1,5 +1,5 @@
 {
-  "welcomeFile": "/idex.html",
+  "welcomeFile": "/index.html",
   "authenticationMethod": "none",
   "logout": {
     "logoutEndpoint": "/do/logout"

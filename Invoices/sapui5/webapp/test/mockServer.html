@@ -2,23 +2,23 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>SAP UI5</title>
+        <title>Mock Server</title>
         <script id="sap-ui-bootstrap"
                 src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
                 data-sap-ui-theme="sap_horizon_dark"
                 data-sap-ui-libs="sap.m"
                 data-sap-ui-compatVersion="edge"
                 data-sap-ui-async="true"
-                data-sap-ui-onInit="module:logaligroup/sapui5/index"
+                data-sap-ui-onInit="module:logaligroup/sapui5/test/initMockServer"
                 data-sap-ui-resourceroots='{
-                    "logaligroup.sapui5":"./"
+                    "logaligroup.sapui5":"../"
                     }'>
         </script>
     </head>
     <body id="content" class="sapUiBody">
-        <div data-sap-ui-component data-name="logaligroup.SAPUI5"
+        <div data-sap-ui-component data-name="logaligroup.sapui5"
                                    data-id="container"
-                                   data-set-settings='{"id":"SAPUI5"}'>
+                                   data-set-settings='{"id":"sapui5"}'>
         </div>
     </body>
 </html>

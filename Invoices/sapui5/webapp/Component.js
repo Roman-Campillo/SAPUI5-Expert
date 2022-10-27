@@ -30,8 +30,11 @@ sap.ui.define([
                 this._helloDialog = new HelloDialog(this.getRootControl());
 
                 //
-                let i18nModel = new ResourceModel({ bundleName: "logaligroup.sapui5.i18n.i18n" });
-                this.setModel(i18nModel, "i18n")
+                //let i18nModel = new ResourceModel({ bundleName: "logaligroup.sapui5.i18n.i18n" });
+                //this.setModel(i18nModel, "i18n")
+
+                // create views based on the url hash
+                this.getRouter().initialize();
             },
             exit: function () {
                 this._helloDialog.destroy();

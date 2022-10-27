@@ -103,20 +103,34 @@
       "routes": [
         {
           "name": "RouteMain",
-          "pattern": ":?query:",
+          "pattern": "",
           "target": [
-            "TargetMain"
+            "TargetOverview"
           ]
-        }
+        },
+        {
+            "name": "Details",
+            "pattern": "details/{invoicePath}",
+            "target": [
+              "TargetDetails"
+            ]
+          }
       ],
       "targets": {
-        "TargetView1": {
+        "TargetOverview": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Main",
-          "viewName": "Main"
-        }
+          "viewId": "Overview",
+          "viewName": "Overview"
+        },
+        "TargetDetails": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "Details",
+            "viewName": "Details"
+          }
       }
     },
     "rootView": {

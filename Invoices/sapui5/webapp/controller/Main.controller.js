@@ -13,6 +13,7 @@ sap.ui.define([
         return Controller.extend("logaligroup.sapui5.controller.Main", {
 
             onInit: function () {
+                this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
             },
 
             onOpenDialogHeader: function() {
